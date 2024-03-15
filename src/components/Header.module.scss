@@ -1,10 +1,32 @@
+@use "../assets/styles/mixins" as mixin;
+
 .header {
+  position:relative;
   background-color: white;
   padding: 10px 20px;
+  height: 58px;
   box-shadow: var(--box-shadow-nav);
   color: var(--primary);
   border-radius: 0 0 15px 15px;
   img {
     width: 100px;
+  }
+}
+
+.headerList {
+  @include mixin.xs {
+    display: none;
+  }
+}
+
+.headerXs{
+  display: none;
+  cursor:pointer;
+  transition: opacity 0.2s;
+  &:hover{
+    opacity:0.8;
+  }
+  @include mixin.xs{
+    display: block;
   }
 }
