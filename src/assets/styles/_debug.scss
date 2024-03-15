@@ -1,19 +1,40 @@
+@use "./mixins" as mixin;
+
 .debug-1 {
-     background-color: rgb(221, 65, 65);
-     border:1px solid rgb(112, 9, 9);
+  background-color: rgb(221, 65, 65);
+  border: 1px solid rgb(112, 9, 9);
 }
 
 .debug-2 {
-    background-color: rgb(91, 221, 65);
-    border:1px solid rgb(37, 104, 11);
+  background-color: rgb(91, 221, 65);
+  border: 1px solid rgb(37, 104, 11);
 }
 
 .debug-3 {
-    background-color: rgb(65, 203, 221);
-    border:1px solid rgb(14, 49, 114);
+  background-color: rgb(65, 203, 221);
+  border: 1px solid rgb(14, 49, 114);
 }
 
 .debug-4 {
-    background-color: rgb(222, 70, 228);
-    border:1px solid rgb(105, 11, 101);
+  background-color: rgb(222, 70, 228);
+  border: 1px solid rgb(105, 11, 101);
+}
+
+.br {
+  @include mixin.xs {
+    border: 2px solid red;
+  }
+  @include mixin.sm {
+    border: 2px solid green;
+  }
+  @include mixin.md {
+    border: 2px solid blue;
+  }
+  @include mixin.lg {
+    border: 2px solid orange;
+  }
+  @include mixin.xl {
+    border: 2px solid purple
+    ;
+  }
 }
